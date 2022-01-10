@@ -47,9 +47,41 @@ ul {
     margin-bottom: 1rem;
 }
 
+.container .image-main {
+    position: relative;
+}
+
+.container .image-main div {
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 50%);
+    width: 100%;
+    height: calc(100% - 4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.container .image-main div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.container .image-main div img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .container h2 {
     color: var(--white);
     margin: 1rem 0.5rem 0.5rem 0;
+}
+
+.container h2:hover{
+    color: var(--cyan);
+    cursor: pointer;
 }
 
 .container ul {
@@ -90,6 +122,11 @@ ul {
 .container .avatar p span {
     color: var(--white);
     font-weight: 400;
+}
+
+.container .avatar p span:hover{
+    color: var(--cyan);
+    cursor: pointer;
 }
 
 .attribution { 
